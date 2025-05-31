@@ -2590,6 +2590,8 @@ GameObject:
   - component: {fileID: 1570311721}
   - component: {fileID: 1570311720}
   - component: {fileID: 1570311719}
+  - component: {fileID: 1570311724}
+  - component: {fileID: 1570311725}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -2609,7 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 0}
+  m_LocomotionProvider: {fileID: 1570311724}
   m_MinHeight: 0
   m_MaxHeight: Infinity
 --- !u!143 &1570311720
@@ -2684,6 +2686,43 @@ Transform:
   - {fileID: 2094551115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1570311724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570311718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41546a7369f61349aa7ca80a7978423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1570311725}
+  locomotionSystem: {fileID: 1570311725}
+  cameraOffset: {fileID: 2094551115}
+  moveSpeed: 1
+  gravity: 9.81
+  jumpSpeed: 2.5
+  standHeight: 1.8
+  crouchHeight: 1
+  standCameraY: 0
+  crouchCameraY: -0.2
+  crouchSmoothSpeed: 5
+--- !u!114 &1570311725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570311718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XROrigin: {fileID: 1570311722}
 --- !u!1 &1585977751
 GameObject:
   m_ObjectHideFlags: 0
